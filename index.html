@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillBridge — Bridge the Gap. Build Your Career.</title>
+<meta name="description" content="SkillBridge is a digital career-readiness platform that compares your current skills with what your dream career requires, then builds you a personalized roadmap.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Decorative skip link for accessibility -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="#home" class="brand" aria-label="SkillBridge home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 32" width="34" height="24" fill="none">
+          <path d="M2 26C8 10 18 10 24 10C30 10 40 10 46 26" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="8" y1="26" x2="8" y2="15" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="18" y1="26" x2="18" y2="11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="30" y1="26" x2="30" y2="11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="40" y1="26" x2="40" y2="15" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-word"><span class="c-blue">Skill</span><span class="c-green">Bridge</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#assessment" class="nav-link">Skill Assessment</a>
+      <a href="#roadmap" class="nav-link">Career Roadmap</a>
+      <a href="#benefits" class="nav-link">Benefits</a>
+      <a href="#about" class="nav-link">About</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <a href="#assessment" class="btn btn-primary btn-sm">Assess My Skills</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-copy reveal">
+      <p class="badge">Career Readiness Platform</p>
+      <h1>Your career starts with the <span class="text-green">right skills.</span></h1>
+      <p class="hero-sub">SkillBridge helps students understand where they are, identify the skills they need, and build a personalized path toward their career goals.</p>
+      <div class="hero-actions">
+        <a href="#assessment" class="btn btn-primary">Assess My Skills</a>
+        <a href="#how-it-works" class="btn btn-outline">Explore How It Works</a>
+      </div>
+      <p class="hero-flow"><span>Learn</span><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i><span>Build</span><i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i><span>Grow</span></p>
+    </div>
+
+    <div class="hero-visual reveal" aria-hidden="true">
+      <div class="hero-chain">
+        <div class="chain-node"><i class="fa-solid fa-bullseye"></i><span>Career Goal</span></div>
+        <div class="chain-line"></div>
+        <div class="chain-node"><i class="fa-solid fa-clipboard-check"></i><span>Skill Assessment</span></div>
+        <div class="chain-line"></div>
+        <div class="chain-node"><i class="fa-solid fa-magnifying-glass-chart"></i><span>Skill Gap</span></div>
+        <div class="chain-line"></div>
+        <div class="chain-node"><i class="fa-solid fa-map-location-dot"></i><span>Roadmap</span></div>
+        <div class="chain-line"></div>
+        <div class="chain-node"><i class="fa-solid fa-laptop-code"></i><span>Projects</span></div>
+        <div class="chain-line"></div>
+        <div class="chain-node"><i class="fa-solid fa-briefcase"></i><span>Internship</span></div>
+      </div>
+
+      <div class="floating-chip chip-1">SQL</div>
+      <div class="floating-chip chip-2">Excel</div>
+      <div class="floating-chip chip-3">Python</div>
+      <div class="floating-chip chip-4">Power BI</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAIN POINTS ============ -->
+<section class="section section-pink" id="pain-points">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>What makes career planning difficult?</h2>
+      <p>Students often know where they want to go, but not always how to get there.</p>
+    </div>
+
+    <div class="pain-grid" id="painGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / WHAT IS SKILLBRIDGE ============ -->
+<section class="section" id="about">
+  <div class="container about-inner">
+    <div class="about-visual reveal" aria-hidden="true">
+      <div class="about-card">
+        <div class="about-row">
+          <span class="skill-label">Your skills</span>
+          <span class="skill-label target">Career requires</span>
+        </div>
+        <div class="about-bars">
+          <div class="about-bar"><span>Excel</span><div class="bar"><i style="width:70%"></i><i class="target-mark" style="left:85%"></i></div></div>
+          <div class="about-bar"><span>SQL</span><div class="bar"><i style="width:55%"></i><i class="target-mark" style="left:75%"></i></div></div>
+          <div class="about-bar"><span>Power BI</span><div class="bar"><i style="width:10%"></i><i class="target-mark" style="left:70%"></i></div></div>
+          <div class="about-bar"><span>Statistics</span><div class="bar"><i style="width:25%"></i><i class="target-mark" style="left:65%"></i></div></div>
+        </div>
+        <div class="about-gap-pill"><i class="fa-solid fa-triangle-exclamation"></i> Gap detected — roadmap ready</div>
+      </div>
+    </div>
+
+    <div class="about-copy reveal">
+      <p class="eyebrow">What is SkillBridge?</p>
+      <h2>A clearer way to plan your career</h2>
+      <p class="lead">SkillBridge is a digital career-readiness platform that compares your current skills with the skills required for your desired career. It identifies skill gaps and builds a personalized roadmap with relevant learning resources, projects, and internship opportunities.</p>
+
+      <div class="feature-trio">
+        <div class="feature-card">
+          <i class="fa-solid fa-compass"></i>
+          <h3>Career Direction</h3>
+          <p>Know exactly which career path fits your goals.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+          <h3>Skill Gap Analysis</h3>
+          <p>See precisely what's missing between you and your goal.</p>
+        </div>
+        <div class="feature-card">
+          <i class="fa-solid fa-route"></i>
+          <h3>Personalized Roadmap</h3>
+          <p>Get a step-by-step plan built around your gaps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="section section-yellow" id="benefits">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>How you benefit from SkillBridge</h2>
+      <p>From confusion to confidence — a clearer path, start to finish.</p>
+    </div>
+
+    <div class="benefits-layout">
+      <ul class="benefits-list reveal">
+        <li><i class="fa-solid fa-circle-check"></i> Clear career direction</li>
+        <li><i class="fa-solid fa-circle-check"></i> Personalized skill development</li>
+        <li><i class="fa-solid fa-circle-check"></i> Relevant learning choices</li>
+        <li><i class="fa-solid fa-circle-check"></i> Better use of time and money</li>
+        <li><i class="fa-solid fa-circle-check"></i> Practical project experience</li>
+        <li><i class="fa-solid fa-circle-check"></i> Improved internship readiness</li>
+        <li><i class="fa-solid fa-circle-check"></i> Greater career confidence</li>
+      </ul>
+
+      <div class="benefits-flow reveal" aria-hidden="true">
+        <div class="flow-step"><span class="flow-dot flow-1"></span>Confusion</div>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <div class="flow-step"><span class="flow-dot flow-2"></span>Clarity</div>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <div class="flow-step"><span class="flow-dot flow-3"></span>Skills</div>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <div class="flow-step"><span class="flow-dot flow-4"></span>Experience</div>
+        <i class="fa-solid fa-arrow-right-long"></i>
+        <div class="flow-step"><span class="flow-dot flow-5"></span>Opportunity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section section-blue" id="how-it-works">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>How SkillBridge solves the problem</h2>
+      <p>Six simple steps take you from uncertainty to career-ready.</p>
+    </div>
+
+    <ol class="process-timeline" id="processTimeline">
+      <li class="process-step reveal">
+        <div class="process-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <span class="process-num">1</span>
+        <h3>Career Goal</h3>
+        <p>Choose your desired career.</p>
+      </li>
+      <li class="process-step reveal">
+        <div class="process-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+        <span class="process-num">2</span>
+        <h3>Skill Assessment</h3>
+        <p>Take a quick skill assessment and see your current skills.</p>
+      </li>
+      <li class="process-step reveal">
+        <div class="process-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <span class="process-num">3</span>
+        <h3>Skill Gap</h3>
+        <p>See what you're good at and what you need to improve.</p>
+      </li>
+      <li class="process-step reveal">
+        <div class="process-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+        <span class="process-num">4</span>
+        <h3>Personalized Roadmap</h3>
+        <p>Get a step-by-step learning plan with courses, resources and timelines.</p>
+      </li>
+      <li class="process-step reveal">
+        <div class="process-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <span class="process-num">5</span>
+        <h3>Projects</h3>
+        <p>Build real-world projects to gain experience.</p>
+      </li>
+      <li class="process-step reveal">
+        <div class="process-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <span class="process-num">6</span>
+        <h3>Internship Opportunities</h3>
+        <p>Find relevant internships and apply with confidence.</p>
+      </li>
+    </ol>
+
+    <p class="flow-caption reveal"><span>Learn</span><i class="fa-solid fa-arrow-right-long"></i><span>Build</span><i class="fa-solid fa-arrow-right-long"></i><span>Grow</span></p>
+  </div>
+</section>
+
+<!-- ============ SKILL ASSESSMENT ============ -->
+<section class="section" id="assessment">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Find your skill gaps</h2>
+      <p>Pick a career, rate your current skills, and get an instant personalized readiness report.</p>
+    </div>
+
+    <div class="assessment-panel reveal">
+
+      <!-- Step 1: Career -->
+      <div class="assessment-step">
+        <label class="step-label" for="careerSelect"><span class="step-num">1</span> Select your target career</label>
+        <select id="careerSelect" class="career-select"></select>
+      </div>
+
+      <!-- Step 2: Skills -->
+      <div class="assessment-step">
+        <p class="step-label"><span class="step-num">2</span> Rate your current skill level</p>
+        <div id="skillList" class="skill-list"></div>
+      </div>
+
+      <div class="assessment-actions">
+        <button id="analyzeBtn" class="btn btn-primary">Analyze My Skills</button>
+        <button id="resetBtn" class="btn btn-ghost" type="button">Reset Assessment</button>
+      </div>
+      <p id="assessmentError" class="assessment-error" role="alert" aria-live="polite"></p>
+
+      <!-- Results -->
+      <div id="resultPanel" class="result-panel" hidden aria-live="polite">
+        <div class="result-top">
+          <div>
+            <p class="eyebrow">Career</p>
+            <h3 id="resultCareer">—</h3>
+          </div>
+          <div class="readiness-ring">
+            <svg viewBox="0 0 120 120" width="120" height="120">
+              <circle cx="60" cy="60" r="52" class="ring-track"/>
+              <circle cx="60" cy="60" r="52" class="ring-fill" id="ringFill"/>
+            </svg>
+            <div class="ring-text">
+              <span id="readinessPct">0%</span>
+              <small>ready</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-col">
+            <h4><i class="fa-solid fa-star"></i> Current strengths</h4>
+            <ul id="strengthsList" class="result-list"></ul>
+          </div>
+          <div class="result-col">
+            <h4><i class="fa-solid fa-triangle-exclamation"></i> Skill gaps</h4>
+            <ul id="gapsList" class="result-list"></ul>
+          </div>
+        </div>
+
+        <div class="result-bars" id="resultBars"></div>
+
+        <div class="result-recs">
+          <h4><i class="fa-solid fa-list-check"></i> Recommended next steps</h4>
+          <ol id="recsList" class="recs-list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="section section-green" id="roadmap">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Your path from learning to career</h2>
+      <p>Click a stage to explore what it includes. Personalized to your assessment once you've run it above.</p>
+    </div>
+
+    <div class="roadmap-stages" id="roadmapStages">
+      <button class="roadmap-stage" data-stage="learn" aria-expanded="true">
+        <div class="stage-head"><i class="fa-solid fa-book-open"></i><h3>Learn</h3><i class="fa-solid fa-chevron-down chev"></i></div>
+        <ul class="stage-list" id="learnList"></ul>
+      </button>
+      <div class="stage-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+      <button class="roadmap-stage" data-stage="build" aria-expanded="false">
+        <div class="stage-head"><i class="fa-solid fa-hammer"></i><h3>Build</h3><i class="fa-solid fa-chevron-down chev"></i></div>
+        <ul class="stage-list" id="buildList"></ul>
+      </button>
+      <div class="stage-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+      <button class="roadmap-stage" data-stage="grow" aria-expanded="false">
+        <div class="stage-head"><i class="fa-solid fa-seedling"></i><h3>Grow</h3><i class="fa-solid fa-chevron-down chev"></i></div>
+        <ul class="stage-list" id="growList"></ul>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERSONA ============ -->
+<section class="section" id="persona">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Who we designed for</h2>
+      <p>Every part of SkillBridge is built around students like Aarav.</p>
+    </div>
+
+    <div class="persona-card reveal">
+      <div class="persona-top">
+        <div class="persona-avatar" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <h3>Aarav</h3>
+          <p class="persona-meta">Age 20 · Undergraduate Student</p>
+        </div>
+      </div>
+
+      <div class="persona-grid">
+        <div class="persona-block">
+          <h4>Goal</h4>
+          <p>Become a Data Analyst</p>
+        </div>
+        <div class="persona-block">
+          <h4>Problem</h4>
+          <p>Doesn't know which skills to prioritize.</p>
+        </div>
+        <div class="persona-block">
+          <h4>Needs</h4>
+          <p>A clear roadmap, relevant resources and internship guidance.</p>
+        </div>
+      </div>
+
+      <div class="persona-skills">
+        <h4>Current skills</h4>
+        <div class="persona-skill-row"><span>Excel</span><span class="tag tag-intermediate">Intermediate</span></div>
+        <div class="persona-skill-row"><span>SQL</span><span class="tag tag-beginner">Beginner</span></div>
+        <div class="persona-skill-row"><span>Python</span><span class="tag tag-beginner">Beginner</span></div>
+        <div class="persona-skill-row"><span>Statistics</span><span class="tag tag-basic">Basic</span></div>
+        <div class="persona-skill-row"><span>Power BI</span><span class="tag tag-none">None</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOMER JOURNEY ============ -->
+<section class="section section-blue" id="journey">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>The SkillBridge journey</h2>
+      <p>From "what should I become" to career-ready, in five clear stages.</p>
+    </div>
+
+    <div class="journey-track">
+      <div class="journey-step reveal">
+        <div class="journey-num">1</div>
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>What I Want to Become</h3>
+        <p>e.g. Data Analyst</p>
+      </div>
+      <div class="journey-step reveal">
+        <div class="journey-num">2</div>
+        <i class="fa-solid fa-clipboard-check"></i>
+        <h3>Skill Assessment</h3>
+        <p>Know your current skills</p>
+      </div>
+      <div class="journey-step reveal">
+        <div class="journey-num">3</div>
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+        <h3>Skill Gap</h3>
+        <p>See what's missing</p>
+      </div>
+      <div class="journey-step reveal">
+        <div class="journey-num">4</div>
+        <i class="fa-solid fa-route"></i>
+        <h3>Personalized Roadmap</h3>
+        <p>Learn, build, grow</p>
+      </div>
+      <div class="journey-step reveal">
+        <div class="journey-num">5</div>
+        <i class="fa-solid fa-award"></i>
+        <h3>Career Ready</h3>
+        <p>Internships & job opportunities</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESIGN THINKING ============ -->
+<section class="section" id="design-thinking">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>Our design thinking approach</h2>
+      <p>SkillBridge was shaped the way real student problems deserve to be solved.</p>
+    </div>
+
+    <div class="dt-track">
+      <div class="dt-card dt-pink reveal">
+        <i class="fa-solid fa-heart"></i>
+        <h3>Empathize</h3>
+        <p>Understand students' needs through interviews, surveys and research.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right-long dt-arrow"></i>
+      <div class="dt-card dt-yellow reveal">
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>Define</h3>
+        <p>Identify the core problem and prioritize what matters most.</p>
+      </div>
+      <i class="fa-solid fa-arrow-right-long dt-arrow"></i>
+      <div class="dt-card dt-green reveal">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h3>Ideate</h3>
+        <p>Create a simple, user-friendly solution with real impact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <h2>Ready to bridge your skill gap?</h2>
+    <p>Know where you want to go. We'll help you understand what it takes to get there.</p>
+    <div class="cta-actions">
+      <a href="#assessment" class="btn btn-white">Start Skill Assessment</a>
+      <a href="#roadmap" class="btn btn-outline-white">Explore Career Roadmap</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-word"><span class="c-blue">Skill</span><span class="c-green">Bridge</span></span>
+      <p>Bridge the Gap. Build Your Career.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#assessment">Skill Assessment</a>
+      <a href="#roadmap">Career Roadmap</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2026 SkillBridge. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
